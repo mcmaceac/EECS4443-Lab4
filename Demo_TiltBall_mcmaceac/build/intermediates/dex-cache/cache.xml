@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_a359354d245026b0a8154e1267aba6b1ba64fc58\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c02e19280bfa4b7042f1eba9623f04edcbe6bcb5">
+        <dex dex="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f7d10dc729e3157a57c8f1cc99c0541134f66acf\classes.dex" />
+    </item>
+
+</items>

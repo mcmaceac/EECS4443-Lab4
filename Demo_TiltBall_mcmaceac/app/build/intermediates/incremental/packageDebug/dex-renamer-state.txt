@@ -1,0 +1,7 @@
+#Thu Oct 19 16:09:27 EDT 2017
+base.0=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_f7d10dc729e3157a57c8f1cc99c0541134f66acf
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_a359354d245026b0a8154e1267aba6b1ba64fc58\\classes.dex
+base.1=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_a359354d245026b0a8154e1267aba6b1ba64fc58
+file.0=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_f7d10dc729e3157a57c8f1cc99c0541134f66acf\\classes.dex
