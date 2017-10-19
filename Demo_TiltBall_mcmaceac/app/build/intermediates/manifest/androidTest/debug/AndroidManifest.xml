@@ -9,8 +9,8 @@
     </application>
 
     <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="ca.yorku.eecs.mack.demotiltball"
+                     android:targetPackage="ca.yorku.eecs.mack.demotiltballmcmaceac"
                      android:handleProfiling="false"
                      android:functionalTest="false"
-                     android:label="Tests for ca.yorku.eecs.mack.demotiltball"/>
+                     android:label="Tests for ca.yorku.eecs.mack.demotiltballmcmaceac"/>
 </manifest>

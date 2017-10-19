@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall\app\src\main\shaders"/></dataSet><dataSet config="debug"><source path="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall\app\src\debug\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\src\main\shaders"/></dataSet><dataSet config="debug"><source path="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\src\debug\shaders"/></dataSet></merger>

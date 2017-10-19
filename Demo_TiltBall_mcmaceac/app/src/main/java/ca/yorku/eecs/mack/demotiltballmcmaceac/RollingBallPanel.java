@@ -59,7 +59,7 @@ public class RollingBallPanel extends View
     float dBall; // the amount to move the ball (in pixels): dBall = dT * velocity
     float xCenter, yCenter; // the center of the screen
     long now, lastT;
-    Paint statsPaint, labelPaint, linePaint, fillPaint, backgroundPaint;
+    Paint statsPaint, labelPaint, linePaint, fillPaint, backgroundPaint, startLinePaint;
     float[] updateY;
 
     public RollingBallPanel(Context contextArg)
@@ -83,6 +83,12 @@ public class RollingBallPanel extends View
     // things that can be initialized from within this View
     private void initialize(Context c)
     {
+        startLinePaint = new Paint();
+        startLinePaint.setColor(Color.RED);
+        startLinePaint.setStyle(Paint.Style.STROKE);
+        startLinePaint.setStrokeWidth(8);
+        startLinePaint.setAntiAlias(true);
+
         linePaint = new Paint();
         linePaint.setColor(Color.RED);
         linePaint.setStyle(Paint.Style.STROKE);
@@ -298,8 +304,16 @@ public class RollingBallPanel extends View
             canvas.drawOval(innerRectangle, linePaint);
         }
 
+        //draw the start line
+        canvas.drawLine(outerRectangle.left, height / 2, innerRectangle.left, height / 2, startLinePaint);
+
+        //draw direction arrow
+        canvas.drawLine(outerRectangle.left - 30, (height / 2) - 100, outerRectangle.left - 30, (height / 2) + 100, startLinePaint);    //line down
+        canvas.drawLine(outerRectangle.left - 50, (height / 2) + 80, outerRectangle.left - 30, (height / 2) + 100, startLinePaint);     //backslash
+        canvas.drawLine(outerRectangle.left - 10, (height / 2) + 80, outerRectangle.left - 30, (height / 2) + 100, startLinePaint);     //forward slash
+
         // draw label
-        canvas.drawText("Demo_TiltBall", 6f, labelTextSize, labelPaint);
+        canvas.drawText("Demo_TiltBall_mcmaceac", 6f, labelTextSize, labelPaint);
 
         // draw stats (pitch, roll, tilt angle, tilt magnitude)
         if (pathType == PATH_TYPE_SQUARE || pathType == PATH_TYPE_CIRCLE)

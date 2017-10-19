@@ -13,12 +13,13 @@ public class DemoTiltBallSetup extends Activity
 	final static String[] GAIN = { "Very low", "Low", "Medium", "High", "Very high" };
 	final static String[] PATH_TYPE = { "Square", "Circle", "Free" };
 	final static String[] PATH_WIDTH = { "Narrow", "Medium", "Wide" };
+	final static Integer[] NUMBER_OF_LAPS = new Integer[]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
 
 	// somewhat arbitrary mappings for gain by order of control
 	final static int[] GAIN_ARG_POSITION_CONTROL = { 5, 10, 20, 40, 80 };
 	final static int[] GAIN_ARG_VELOCITY_CONTROL = { 25, 50, 100, 200, 400 };
 
-	Spinner spinOrderOfControl, spinGain, spinPathMode, spinPathWidth;
+	Spinner spinOrderOfControl, spinGain, spinPathMode, spinPathWidth, spinNumLaps;
 
 	// called when the activity is first created
 	@Override
@@ -45,6 +46,11 @@ public class DemoTiltBallSetup extends Activity
 		ArrayAdapter<CharSequence> adapter4 = new ArrayAdapter<CharSequence>(this, R.layout.spinnerstyle, PATH_WIDTH);
 		spinPathWidth.setAdapter(adapter4);
 		spinPathWidth.setSelection(1); // medium
+
+		spinNumLaps = (Spinner) findViewById(R.id.paramNumLaps);
+		ArrayAdapter<Integer> adapter5 = new ArrayAdapter<Integer>(this, R.layout.spinnerstyle, NUMBER_OF_LAPS);
+		spinNumLaps.setAdapter(adapter5);
+		spinNumLaps.setSelection(0); // 1
 	}
 
 	// called when the "OK" button is tapped

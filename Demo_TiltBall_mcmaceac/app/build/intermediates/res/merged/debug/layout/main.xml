@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <ca.yorku.eecs.mack.demotiltball.RollingBallPanel
+    <ca.yorku.eecs.mack.demotiltballmcmaceac.RollingBallPanel
         android:id="@+id/rollingballpanel"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

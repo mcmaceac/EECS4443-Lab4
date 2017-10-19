@@ -99,6 +99,22 @@
                     android:gravity="left"
                     android:textAppearance="?android:attr/textAppearanceMedium"/>
             </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/paramLabelNumLaps"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="@string/paramlabelnumlapstext"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <Spinner
+                    android:id="@+id/paramNumLaps"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+            </TableRow>
         </TableLayout>
 
         <LinearLayout
