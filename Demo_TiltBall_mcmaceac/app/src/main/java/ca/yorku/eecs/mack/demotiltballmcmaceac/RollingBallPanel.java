@@ -7,6 +7,8 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
+import android.media.AudioManager;
+import android.media.ToneGenerator;
 import android.os.Vibrator;
 import android.util.AttributeSet;
 import android.view.View;
@@ -46,7 +48,10 @@ public class RollingBallPanel extends View
     float pathWidth;
     boolean touchFlag;
     Vibrator vib;
+    ToneGenerator tg;
     int wallHits;
+    int laps;
+    boolean lapFlag;
 
     float xBall, yBall; // top-left of the ball (for painting)
     float xBallCenter, yBallCenter; // center of the ball
@@ -118,14 +123,17 @@ public class RollingBallPanel extends View
         lastT = System.nanoTime();
         this.setBackgroundColor(Color.LTGRAY);
         touchFlag = false;
+        lapFlag = false;
         outerRectangle = new RectF();
         innerRectangle = new RectF();
         innerShadowRectangle = new RectF();
         outerShadowRectangle = new RectF();
         ballNow = new RectF();
         wallHits = 0;
+        laps = 0;
 
         vib = (Vibrator)c.getSystemService(Context.VIBRATOR_SERVICE);
+        tg = new ToneGenerator(AudioManager.STREAM_MUSIC, 100);
     }
 
     /**
@@ -200,7 +208,7 @@ public class RollingBallPanel extends View
         offset = (int)(DEFAULT_OFFSET * pixelDensity + 0.5f);
 
         // compute y offsets for painting stats (bottom-left of display)
-        updateY = new float[6]; // up to 6 lines of stats will appear
+        updateY = new float[7]; // up to 6 lines of stats will appear
         for (int i = 0; i < updateY.length; ++i)
             updateY[i] = height - offset - i * (statsTextSize + gap);
     }
@@ -278,6 +286,15 @@ public class RollingBallPanel extends View
         } else if (!ballTouchingLine() && touchFlag)
             touchFlag = false; // the ball is no longer touching the line: clear the touchFlag
 
+        if (yBallCenter > (height / 2) && !lapFlag) {
+            lapFlag = true;
+            laps++;
+            tg.startTone(ToneGenerator.TONE_CDMA_PIP, 150);
+        }
+        else if (!(yBallCenter > (height / 2)) && lapFlag) {
+            lapFlag = false;
+        }
+
         invalidate(); // force onDraw to redraw the screen with the ball in its new position
     }
 
@@ -318,6 +335,7 @@ public class RollingBallPanel extends View
         // draw stats (pitch, roll, tilt angle, tilt magnitude)
         if (pathType == PATH_TYPE_SQUARE || pathType == PATH_TYPE_CIRCLE)
         {
+            canvas.drawText("Laps = " + laps, 6f, updateY[6], statsPaint);
             canvas.drawText("Wall hits = " + wallHits, 6f, updateY[5], statsPaint);
             canvas.drawText("-----------------", 6f, updateY[4], statsPaint);
         }
