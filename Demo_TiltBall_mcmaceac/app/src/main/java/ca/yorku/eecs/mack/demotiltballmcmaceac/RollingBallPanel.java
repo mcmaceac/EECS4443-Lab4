@@ -44,6 +44,8 @@ public class RollingBallPanel extends View
     float width, height, pixelDensity;
     int labelTextSize, statsTextSize, gap, offset;
 
+    float finishLineLeftX, finishLineLeftY, finishLineRightX, finishLineRightY;
+
     RectF innerRectangle, outerRectangle, innerShadowRectangle, outerShadowRectangle, ballNow;
     float pathWidth;
     boolean touchFlag;
@@ -52,6 +54,7 @@ public class RollingBallPanel extends View
     int wallHits;
     int laps;
     boolean lapFlag;
+    boolean notCheating = true;
 
     float xBall, yBall; // top-left of the ball (for painting)
     float xBallCenter, yBallCenter; // center of the ball
@@ -286,12 +289,18 @@ public class RollingBallPanel extends View
         } else if (!ballTouchingLine() && touchFlag)
             touchFlag = false; // the ball is no longer touching the line: clear the touchFlag
 
-        if (yBallCenter > (height / 2) && !lapFlag) {
+
+        //if notCheating is already true, we know the user has crossed the halfway point already
+        notCheating = notCheating || ballCrossedHalfWayPoint();
+
+        // increase the lap count if the ball crosses the halfway point
+        // we use the lapflag to know that the user is already in the bottom half
+        if (ballCrossedFinishLine() && !lapFlag) {
             lapFlag = true;
-            laps++;
             tg.startTone(ToneGenerator.TONE_CDMA_PIP, 150);
+            ++laps;
         }
-        else if (!(yBallCenter > (height / 2)) && lapFlag) {
+        else if (yBallCenter < (height / 2) && lapFlag) {
             lapFlag = false;
         }
 
@@ -322,7 +331,11 @@ public class RollingBallPanel extends View
         }
 
         //draw the start line
-        canvas.drawLine(outerRectangle.left, height / 2, innerRectangle.left, height / 2, startLinePaint);
+        finishLineLeftX = outerRectangle.left;
+        finishLineLeftY = height / 2;
+        finishLineRightX = innerRectangle.left;
+        finishLineRightY = height / 2;
+        canvas.drawLine(finishLineLeftX, finishLineLeftY, finishLineRightX, finishLineRightY, startLinePaint);
 
         //draw direction arrow
         canvas.drawLine(outerRectangle.left - 30, (height / 2) - 100, outerRectangle.left - 30, (height / 2) + 100, startLinePaint);    //line down
@@ -402,5 +415,35 @@ public class RollingBallPanel extends View
                 return true; // touching inner circular border
         }
         return false;
+    }
+
+    // returns true if the ball crosses the finish line marked on the screen
+    public boolean ballCrossedFinishLine() {
+
+        if (yBallCenter > (height / 2)) {
+            //check to see if the ball is between the line boundaries and if the user has at least
+            //crossed the half way point
+            if (notCheating && ballNow.intersects(finishLineLeftX, finishLineLeftY, finishLineRightX, finishLineRightY)) {
+                notCheating = false;        //user must cross half way point in order to set this to true
+                return true;
+            }
+            else
+                return false;
+        }
+        else
+            return false;
+    }
+
+    //used to detect cheating (user must pass halfway point to register a lap
+    public boolean ballCrossedHalfWayPoint() {
+        if (yBallCenter < (height / 2)) {
+            //check to see if the ball is between the line boundaries and if the user has at least
+            //crossed the half way point
+            if (ballNow.intersects(xCenter, finishLineLeftY, width, finishLineRightY)) {
+                return true;
+            } else
+                return false;
+        } else
+            return false;
     }
 }

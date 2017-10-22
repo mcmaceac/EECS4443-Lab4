@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Oct 19 18:31:23 EDT 2017
+#Sun Oct 22 14:05:03 EDT 2017
 2.base=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_
 5.file=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\spinnerstyle.xml
 5.set=ANDROID_RESOURCE
