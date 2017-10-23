@@ -11,6 +11,7 @@ import android.media.AudioManager;
 import android.media.ToneGenerator;
 import android.os.Vibrator;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 public class RollingBallPanel extends View
@@ -61,7 +62,9 @@ public class RollingBallPanel extends View
     float xBallCenter, yBallCenter; // center of the ball
 
     double startTime;
+    double startLapTime;
     double timeInside, timeOutside;
+    double lapTime;
     double[] lapTimes;
 
     float pitch, roll;
@@ -139,7 +142,9 @@ public class RollingBallPanel extends View
         ballNow = new RectF();
         wallHits = 0;
         laps = 0;
+        lapTime = 0;
         startTime = System.currentTimeMillis();
+        startLapTime = startTime;
 
         vib = (Vibrator)c.getSystemService(Context.VIBRATOR_SERVICE);
         tg = new ToneGenerator(AudioManager.STREAM_MUSIC, 100);
@@ -216,6 +221,7 @@ public class RollingBallPanel extends View
         gap = (int)(DEFAULT_GAP * pixelDensity + 0.5f);
         offset = (int)(DEFAULT_OFFSET * pixelDensity + 0.5f);
 
+        lapTimes = new double[targetLaps];          //container for the lap times
         // compute y offsets for painting stats (bottom-left of display)
         updateY = new float[8]; // up to 6 lines of stats will appear
         for (int i = 0; i < updateY.length; ++i)
@@ -303,6 +309,7 @@ public class RollingBallPanel extends View
         else {
             timeOutside = System.currentTimeMillis() - startTime - timeInside;
         }
+        lapTime = System.currentTimeMillis() - startLapTime;
 
         //if notCheating is already true, we know the user has crossed the halfway point already
         notCheating = notCheating || ballCrossedHalfWayPoint();
@@ -310,9 +317,12 @@ public class RollingBallPanel extends View
         // increase the lap count if the ball crosses the halfway point
         // we use the lapflag to know that the user is already in the bottom half
         if (ballCrossedFinishLine() && !lapFlag) {
+            Log.i("MYDEBUG", "lapTimes size = " + lapTimes.length);
             lapFlag = true;
             tg.startTone(ToneGenerator.TONE_CDMA_PIP, 150);
+            lapTimes[laps] = lapTime;
             ++laps;
+            startLapTime = System.currentTimeMillis();
         }
         else if (yBallCenter < (height / 2) && lapFlag) {
             lapFlag = false;
@@ -362,7 +372,7 @@ public class RollingBallPanel extends View
         // draw stats (pitch, roll, tilt angle, tilt magnitude)
         if (pathType == PATH_TYPE_SQUARE || pathType == PATH_TYPE_CIRCLE)
         {
-            canvas.drawText("Inside = " + timeInside / 1000.0 + " Outside = " + timeOutside / 1000.0, 6f, updateY[7], statsPaint);
+            canvas.drawText("Laptime = " + lapTime / 1000.0, 6f, updateY[7], statsPaint);
             canvas.drawText("Laps = " + laps + "/" + targetLaps, 6f, updateY[6], statsPaint);
             canvas.drawText("Wall hits = " + wallHits, 6f, updateY[5], statsPaint);
             canvas.drawText("-----------------", 6f, updateY[4], statsPaint);
