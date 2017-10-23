@@ -46,18 +46,23 @@ public class RollingBallPanel extends View
 
     float finishLineLeftX, finishLineLeftY, finishLineRightX, finishLineRightY;
 
-    RectF innerRectangle, outerRectangle, innerShadowRectangle, outerShadowRectangle, ballNow;
+    RectF innerRectangle, outerRectangle, innerShadowRectangle, outerShadowRectangle, ballNow, outerDetectRectangle, innerDetectRectangle;
+
     float pathWidth;
     boolean touchFlag;
     Vibrator vib;
     ToneGenerator tg;
     int wallHits;
-    int laps;
+    int laps, targetLaps;
     boolean lapFlag;
     boolean notCheating = true;
 
     float xBall, yBall; // top-left of the ball (for painting)
     float xBallCenter, yBallCenter; // center of the ball
+
+    double startTime;
+    double timeInside, timeOutside;
+    double[] lapTimes;
 
     float pitch, roll;
     float tiltAngle, tiltMagnitude;
@@ -134,6 +139,7 @@ public class RollingBallPanel extends View
         ballNow = new RectF();
         wallHits = 0;
         laps = 0;
+        startTime = System.currentTimeMillis();
 
         vib = (Vibrator)c.getSystemService(Context.VIBRATOR_SERVICE);
         tg = new ToneGenerator(AudioManager.STREAM_MUSIC, 100);
@@ -211,7 +217,7 @@ public class RollingBallPanel extends View
         offset = (int)(DEFAULT_OFFSET * pixelDensity + 0.5f);
 
         // compute y offsets for painting stats (bottom-left of display)
-        updateY = new float[7]; // up to 6 lines of stats will appear
+        updateY = new float[8]; // up to 6 lines of stats will appear
         for (int i = 0; i < updateY.length; ++i)
             updateY[i] = height - offset - i * (statsTextSize + gap);
     }
@@ -290,6 +296,14 @@ public class RollingBallPanel extends View
             touchFlag = false; // the ball is no longer touching the line: clear the touchFlag
 
 
+        // check to see if the ball is inside the boundaries, and update timers appropriately
+        if (insideBoundaries()) {
+            timeInside = System.currentTimeMillis() - startTime - timeOutside;
+        }
+        else {
+            timeOutside = System.currentTimeMillis() - startTime - timeInside;
+        }
+
         //if notCheating is already true, we know the user has crossed the halfway point already
         notCheating = notCheating || ballCrossedHalfWayPoint();
 
@@ -348,7 +362,8 @@ public class RollingBallPanel extends View
         // draw stats (pitch, roll, tilt angle, tilt magnitude)
         if (pathType == PATH_TYPE_SQUARE || pathType == PATH_TYPE_CIRCLE)
         {
-            canvas.drawText("Laps = " + laps, 6f, updateY[6], statsPaint);
+            canvas.drawText("Inside = " + timeInside / 1000.0 + " Outside = " + timeOutside / 1000.0, 6f, updateY[7], statsPaint);
+            canvas.drawText("Laps = " + laps + "/" + targetLaps, 6f, updateY[6], statsPaint);
             canvas.drawText("Wall hits = " + wallHits, 6f, updateY[5], statsPaint);
             canvas.drawText("-----------------", 6f, updateY[4], statsPaint);
         }
@@ -365,7 +380,7 @@ public class RollingBallPanel extends View
     /*
      * Configure the rolling ball panel according to setup parameters
      */
-    public void configure(String pathMode, String pathWidthArg, int gainArg, String orderOfControlArg)
+    public void configure(String pathMode, String pathWidthArg, int gainArg, String orderOfControlArg, int lapNumberArg)
     {
         // square vs. circle
         if (pathMode.equals("Square"))
@@ -383,6 +398,7 @@ public class RollingBallPanel extends View
         else
             pathWidth = PATH_WIDTH_MEDIUM;
 
+        targetLaps = lapNumberArg;
         gain = gainArg;
         orderOfControl = orderOfControlArg;
     }
@@ -445,5 +461,19 @@ public class RollingBallPanel extends View
                 return false;
         } else
             return false;
+    }
+
+    public boolean insideBoundaries() {
+        if (pathType == PATH_TYPE_SQUARE) {
+            ballNow.left = xBall;
+            ballNow.top = yBall;
+            ballNow.right = xBall + ballDiameter;
+            ballNow.bottom = yBall + ballDiameter;
+
+            if (RectF.intersects(ballNow, outerRectangle) && !RectF.intersects(ballNow, innerShadowRectangle)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

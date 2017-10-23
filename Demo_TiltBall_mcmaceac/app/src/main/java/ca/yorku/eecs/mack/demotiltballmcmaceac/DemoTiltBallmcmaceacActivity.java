@@ -58,6 +58,7 @@ public class DemoTiltBallmcmaceacActivity extends Activity implements SensorEven
     String orderOfControl, pathType, pathWidth;
     int gain;
     int defaultOrientation;
+    int targetLaps;
     ScreenRefreshTimer refreshScreen;
     private SensorManager sm;
     private Sensor sA, sM, sO;
@@ -74,6 +75,8 @@ public class DemoTiltBallmcmaceacActivity extends Activity implements SensorEven
         gain = b.getInt("gain");
         pathType = b.getString("pathType");
         pathWidth = b.getString("pathWidth");
+        targetLaps = b.getInt("laps");
+
 
         // set alpha for low-pass filter (based on sampling rate and order of control)
         if (orderOfControl.equals("Velocity")) // velocity control
@@ -93,7 +96,7 @@ public class DemoTiltBallmcmaceacActivity extends Activity implements SensorEven
 
         // configure rolling ball panel, as per setup parameters
         rb = (RollingBallPanel)findViewById(R.id.rollingballpanel);
-        rb.configure(pathType, pathWidth, gain, orderOfControl);
+        rb.configure(pathType, pathWidth, gain, orderOfControl, targetLaps);
 
         // get sensors
         sm = (SensorManager)getSystemService(SENSOR_SERVICE);

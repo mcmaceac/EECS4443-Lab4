@@ -61,6 +61,7 @@ public class DemoTiltBallSetup extends Activity
 
 		// actual gain value depends on order of control
 		int gain;
+		int laps = NUMBER_OF_LAPS[spinNumLaps.getSelectedItemPosition()];
 		if (orderOfControl.equals("Velocity"))
 			gain = GAIN_ARG_VELOCITY_CONTROL[spinGain.getSelectedItemPosition()];
 		else
@@ -75,6 +76,7 @@ public class DemoTiltBallSetup extends Activity
 		b.putInt("gain", gain);
 		b.putString("pathType", pathType);
 		b.putString("pathWidth", pathWidth);
+		b.putInt("laps", laps);
 
 		// start experiment activity
 		Intent i = new Intent(getApplicationContext(), DemoTiltBallmcmaceacActivity.class);
