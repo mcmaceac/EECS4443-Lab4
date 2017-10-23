@@ -9,10 +9,12 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.media.AudioManager;
 import android.media.ToneGenerator;
+import android.os.Bundle;
 import android.os.Vibrator;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
+import android.content.Intent;
 
 public class RollingBallPanel extends View
 {
@@ -323,6 +325,31 @@ public class RollingBallPanel extends View
             lapTimes[laps] = lapTime;
             ++laps;
             startLapTime = System.currentTimeMillis();
+
+            // we have reached the target laps, meaning we need to show the results screen
+            if (laps == targetLaps) {
+                //calculate the average lap time
+                double sum = 0.0;
+                for (int i = 0; i < targetLaps; i++) {
+                    sum += lapTimes[i];
+                }
+                sum /= targetLaps;
+
+                //calculate the % time inside the boundaries
+                double percentInPathTime = (timeInside / (timeInside + timeOutside) * 100);
+
+                Bundle b = new Bundle();
+                b.putInt("wallHits", wallHits);
+                b.putDouble("averageLapTime", sum);
+                b.putDouble("percentInPathTime", percentInPathTime);
+                b.putInt("targetLaps", targetLaps);
+
+                Context c = getContext();
+                Intent i = new Intent(c, Results.class);
+                i.putExtras(b);
+                c.startActivity(i);
+            }
+
         }
         else if (yBallCenter < (height / 2) && lapFlag) {
             lapFlag = false;
