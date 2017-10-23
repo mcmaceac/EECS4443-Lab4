@@ -1,4 +1,4 @@
-#Sun Oct 22 14:05:06 EDT 2017
+#Mon Oct 23 16:17:21 EDT 2017
 base.0=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_3f7df8936778b3f8a59bcd844622a927a2ee1ebc
 renamed.1=classes2.dex
 renamed.0=classes.dex
