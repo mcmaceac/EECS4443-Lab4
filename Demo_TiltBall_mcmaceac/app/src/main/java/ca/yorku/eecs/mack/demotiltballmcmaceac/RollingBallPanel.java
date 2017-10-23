@@ -372,7 +372,7 @@ public class RollingBallPanel extends View
         // draw stats (pitch, roll, tilt angle, tilt magnitude)
         if (pathType == PATH_TYPE_SQUARE || pathType == PATH_TYPE_CIRCLE)
         {
-            canvas.drawText("Laptime = " + lapTime / 1000.0, 6f, updateY[7], statsPaint);
+            canvas.drawText("Inside = " + insideBoundaries(), 6f, updateY[7], statsPaint);
             canvas.drawText("Laps = " + laps + "/" + targetLaps, 6f, updateY[6], statsPaint);
             canvas.drawText("Wall hits = " + wallHits, 6f, updateY[5], statsPaint);
             canvas.drawText("-----------------", 6f, updateY[4], statsPaint);
@@ -483,6 +483,14 @@ public class RollingBallPanel extends View
             if (RectF.intersects(ballNow, outerRectangle) && !RectF.intersects(ballNow, innerShadowRectangle)) {
                 return true;
             }
+        }
+        else if (pathType == PATH_TYPE_CIRCLE) {
+            final float ballDistance = (float)Math.sqrt((xBallCenter - xCenter) * (xBallCenter - xCenter)
+                    + (yBallCenter - yCenter) * (yBallCenter - yCenter));
+
+            // pythagorean theorem: if < r, it is in circle. if > r, outside circle
+            if (Math.abs(ballDistance) < (radiusOuter) && Math.abs(ballDistance) > (radiusInner))
+                return true;
         }
         return false;
     }
