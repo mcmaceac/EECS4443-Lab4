@@ -334,7 +334,6 @@ public class RollingBallPanel extends View
                     sum += lapTimes[i];
                 }
                 sum /= targetLaps;
-                sum /= 1000.0; //converting to seconds
 
                 //calculate the % time inside the boundaries
                 double percentInPathTime = (timeInside / (timeInside + timeOutside) * 100);
@@ -348,7 +347,6 @@ public class RollingBallPanel extends View
                 Context c = getContext();
                 Intent i = new Intent(c, Results.class);
                 i.putExtras(b);
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 c.startActivity(i);
             }
 

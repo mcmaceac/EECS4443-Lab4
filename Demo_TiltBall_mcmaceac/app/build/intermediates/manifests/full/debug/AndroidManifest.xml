@@ -30,10 +30,6 @@
             android:label="@string/app_name"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
-        <activity
-            android:name="ca.yorku.eecs.mack.demotiltballmcmaceac.Results"
-            android:label="Demo_TiltBall" >
-        </activity>
     </application>
 
 </manifest>
