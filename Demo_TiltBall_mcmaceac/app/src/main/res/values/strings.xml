@@ -10,5 +10,7 @@
     <string name="paramlabelnumlapstext">Number of laps</string>
     <string name="button01text">OK</string>
     <string name="button03text">Exit</string>
+    <string name="button04text">Setup</string>
+    <string name="resultstitletext">Results</string>
 
 </resources>

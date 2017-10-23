@@ -1,10 +1,11 @@
 #Internal package file, do not edit.
-#Sun Oct 22 14:05:06 EDT 2017
+#Mon Oct 23 16:17:21 EDT 2017
 8.set=ANDROID_RESOURCE
 1.base=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_
 1.file=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
 3.file=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_b4e97bd4aae1f11735864c3c4b6ce50db58fd2f4\\classes.dex
 3.base=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_b4e97bd4aae1f11735864c3c4b6ce50db58fd2f4
+15.set=JAVA_RESOURCE
 4.set=ANDROID_RESOURCE
 5.base=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\folders\\2\\1f\\main
 5.file=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\folders\\2\\1f\\main\\ca\\yorku\\eecs\\mack\\demotiltballmcmaceac\\DemoTiltBall-4.jpg
@@ -18,8 +19,10 @@
 13.base=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\folders\\2\\1f\\main
 11.set=ANDROID_RESOURCE
 0.set=JAVA_RESOURCE
+15.file=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\folders\\2\\1f\\main\\ca\\yorku\\eecs\\mack\\demotiltballmcmaceac\\DemoTiltBall-5.jpg
+15.base=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\folders\\2\\1f\\main
 7.set=JAVA_RESOURCE
-14.set=JAVA_RESOURCE
+14.set=ANDROID_RESOURCE
 3.set=DEX
 10.set=JAVA_RESOURCE
 0.base=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\folders\\2\\1f\\main
@@ -39,10 +42,10 @@
 2.set=DEX
 12.file=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\main.xml
 12.base=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_
-14.file=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\folders\\2\\1f\\main\\ca\\yorku\\eecs\\mack\\demotiltballmcmaceac\\DemoTiltBall-5.jpg
-14.base=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\folders\\2\\1f\\main
+14.file=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\results.xml
+14.base=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_
 9.set=ANDROID_RESOURCE
-count=15
+count=16
 5.set=JAVA_RESOURCE
 12.set=ANDROID_RESOURCE
 1.set=ANDROID_RESOURCE

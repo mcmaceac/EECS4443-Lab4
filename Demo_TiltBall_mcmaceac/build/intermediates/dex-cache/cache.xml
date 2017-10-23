@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_3f7df8936778b3f8a59bcd844622a927a2ee1ebc\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
         <dex dex="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_a359354d245026b0a8154e1267aba6b1ba64fc58\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_3f7df8936778b3f8a59bcd844622a927a2ee1ebc\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="bd7a2fa14af24d7c70e9d08f49c1f2f320a2162c">
+        sha1="0edcfd3a07d6965fa533acdb6afe3d0dd2503d57">
         <dex dex="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_b4e97bd4aae1f11735864c3c4b6ce50db58fd2f4\classes.dex" />
     </item>
 
