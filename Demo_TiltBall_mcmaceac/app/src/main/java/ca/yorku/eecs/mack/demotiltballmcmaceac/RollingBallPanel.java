@@ -319,7 +319,7 @@ public class RollingBallPanel extends View
         // increase the lap count if the ball crosses the halfway point
         // we use the lapflag to know that the user is already in the bottom half
         if (ballCrossedFinishLine() && !lapFlag) {
-            Log.i("MYDEBUG", "lapTimes size = " + lapTimes.length);
+            //Log.i("MYDEBUG", "lapTimes size = " + lapTimes.length);
             lapFlag = true;
             tg.startTone(ToneGenerator.TONE_CDMA_PIP, 150);
             lapTimes[laps] = lapTime;
@@ -474,8 +474,15 @@ public class RollingBallPanel extends View
 
     // returns true if the ball crosses the finish line marked on the screen
     public boolean ballCrossedFinishLine() {
+        ballNow.left = xBall;
+        ballNow.top = yBall;
+        ballNow.right = xBall + ballDiameter;
+        ballNow.bottom = yBall + ballDiameter;
 
         if (yBallCenter > (height / 2)) {
+            Log.i("MYDEBUG", "yBallCenter > (height / 2)");
+            Log.i("MYDEBUG", "ballNow.intersects: " + ballNow.intersects(finishLineLeftX, finishLineLeftY, finishLineRightX, finishLineRightY));
+            Log.i("MYDEBUG", "finishLineLeftX: " + finishLineLeftX + " mid: " + finishLineLeftY + " finishLineRightX: " + finishLineRightX);
             //check to see if the ball is between the line boundaries and if the user has at least
             //crossed the half way point
             if (notCheating && ballNow.intersects(finishLineLeftX, finishLineLeftY, finishLineRightX, finishLineRightY)) {

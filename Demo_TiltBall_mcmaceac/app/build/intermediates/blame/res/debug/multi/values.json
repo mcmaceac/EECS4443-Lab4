@@ -363,7 +363,14 @@
                     "endOffset": 101
                 },
                 "from": {
-                    "file": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endColumn": 50,
+                        "endOffset": 105
+                    }
                 }
             },
             {
@@ -375,7 +382,14 @@
                     "endOffset": 145
                 },
                 "from": {
-                    "file": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 498,
+                        "endColumn": 43,
+                        "endOffset": 537
+                    }
                 }
             },
             {
@@ -387,7 +401,14 @@
                     "endOffset": 191
                 },
                 "from": {
-                    "file": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 543,
+                        "endColumn": 45,
+                        "endOffset": 584
+                    }
                 }
             },
             {
@@ -418,7 +439,14 @@
                     "endOffset": 290
                 },
                 "from": {
-                    "file": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 253,
+                        "endColumn": 51,
+                        "endOffset": 300
+                    }
                 }
             },
             {
@@ -430,7 +458,14 @@
                     "endOffset": 355
                 },
                 "from": {
-                    "file": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 432,
+                        "endColumn": 64,
+                        "endOffset": 492
+                    }
                 }
             },
             {
@@ -442,7 +477,14 @@
                     "endOffset": 429
                 },
                 "from": {
-                    "file": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 178,
+                        "endColumn": 73,
+                        "endOffset": 247
+                    }
                 }
             },
             {
@@ -454,7 +496,14 @@
                     "endOffset": 490
                 },
                 "from": {
-                    "file": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 370,
+                        "endColumn": 60,
+                        "endOffset": 426
+                    }
                 }
             },
             {
@@ -466,7 +515,14 @@
                     "endOffset": 553
                 },
                 "from": {
-                    "file": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 306,
+                        "endColumn": 62,
+                        "endOffset": 364
+                    }
                 }
             },
             {
@@ -497,7 +553,14 @@
                     "endOffset": 672
                 },
                 "from": {
-                    "file": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 111,
+                        "endColumn": 65,
+                        "endOffset": 172
+                    }
                 }
             }
         ]
