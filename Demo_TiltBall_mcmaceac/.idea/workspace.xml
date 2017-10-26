@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="exception" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="MYDEBUG" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
@@ -67,8 +67,8 @@
       <file leaf-file-name="RollingBallPanel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/yorku/eecs/mack/demotiltballmcmaceac/RollingBallPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="569" column="39" selection-start-line="569" selection-start-column="39" selection-end-line="569" selection-end-column="39" />
+            <state relative-caret-position="217">
+              <caret line="324" column="56" selection-start-line="324" selection-start-column="56" selection-end-line="324" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -2991,8 +2991,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/yorku/eecs/mack/demotiltballmcmaceac/RollingBallPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="569" column="39" selection-start-line="569" selection-start-column="39" selection-end-line="569" selection-end-column="39" />
+        <state relative-caret-position="217">
+          <caret line="324" column="56" selection-start-line="324" selection-start-column="56" selection-end-line="324" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

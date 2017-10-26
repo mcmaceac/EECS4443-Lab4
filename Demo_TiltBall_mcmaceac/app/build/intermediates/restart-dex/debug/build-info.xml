@@ -2,34 +2,64 @@
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="24"
-    build-mode="COLD"
+    build-mode="FULL"
     density="xxxhdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1509032464382"
+    timestamp="1509034694730"
     token="-6723123115964177586"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="169" />
+        duration="150" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="26" />
+        duration="24" />
     <task
         name="verifier"
-        duration="11" />
+        duration="12" />
 
     <artifact
         location="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
         type="SPLIT" />
+    <artifact
+        location="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\build\outputs\apk\app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1509032399197"
+        timestamp="1509034694730"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
@@ -64,14 +94,6 @@
         <artifact
             location="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\build\outputs\apk\app-debug.apk"
             type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1509032464382"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
     </build>
 
 </instant-run>

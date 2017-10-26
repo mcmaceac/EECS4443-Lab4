@@ -59,12 +59,14 @@ public class RollingBallPanel extends View
     int laps, targetLaps;
     boolean lapFlag;
     boolean notCheating = true;
+    boolean testingStarted = false;
 
     float xBall, yBall; // top-left of the ball (for painting)
     float xBallCenter, yBallCenter; // center of the ball
 
     double startTime;
     double startLapTime;
+    double ovalStartTime, ovalInsideTime;
     double timeInside, timeOutside;
     double lapTime;
     double[] lapTimes;
@@ -316,13 +318,39 @@ public class RollingBallPanel extends View
         xBallCenter = xBall + ballDiameter / 2f;
         yBallCenter = yBall + ballDiameter / 2f;
 
+        if (!testingStarted && ovalInsideTime >= 1000) {                   //1000 ms = 1 second
+            startOvalPaint.setColor(Color.LTGRAY);      //make the start oval disappear if the user
+            invalidate();                               //has been in it for more than one second
+            testingStarted = true;
+            tg.startTone(ToneGenerator.TONE_CDMA_PIP, 500);
+        }
+
+        if (!testingStarted && insideStartOval()) {
+            if (ovalStartTime != 0) {
+                ovalInsideTime += System.currentTimeMillis() - ovalStartTime;
+                ovalStartTime = System.currentTimeMillis();
+            }
+            else {
+                ovalStartTime = System.currentTimeMillis();
+            }
+        }
+        else if (!testingStarted && !insideStartOval()){
+            ovalInsideTime = 0.0;
+            ovalStartTime = 0.0;
+        }
+        else {      //testing has started, resume normal
+            updateBallStats();
+        }
+        invalidate(); // force onDraw to redraw the screen with the ball in its new position
+    }
+
+    public void updateBallStats() {
         if (ballTouchingLine() && !insideBoundaries()) {
             touchFlag = true;                               //we only want a vibrate when the ball goes from inside to outside
         }
         // if ball touches wall, vibrate and increment wallHits count
         // NOTE: We also use a boolean touchFlag so we only vibrate on the first touch
-        if (ballTouchingLine() && !touchFlag)
-        {
+        if (ballTouchingLine() && !touchFlag) {
             touchFlag = true; // the ball has *just* touched the line: set the touchFlag
             vib.vibrate(20); // 20 ms vibrotactile pulse
             ++wallHits;
@@ -334,8 +362,7 @@ public class RollingBallPanel extends View
         // check to see if the ball is inside the boundaries, and update timers appropriately
         if (insideBoundaries()) {
             timeInside = System.currentTimeMillis() - startTime - timeOutside;
-        }
-        else {
+        } else {
             timeOutside = System.currentTimeMillis() - startTime - timeInside;
         }
         lapTime = System.currentTimeMillis() - startLapTime;
@@ -379,12 +406,9 @@ public class RollingBallPanel extends View
                 c.startActivity(i);
             }
 
-        }
-        else if (yBallCenter < (height / 2) && lapFlag) {
+        } else if (yBallCenter < (height / 2) && lapFlag) {
             lapFlag = false;
         }
-
-        invalidate(); // force onDraw to redraw the screen with the ball in its new position
     }
 
     protected void onDraw(Canvas canvas)
@@ -431,7 +455,7 @@ public class RollingBallPanel extends View
         // draw stats (pitch, roll, tilt angle, tilt magnitude)
         if (pathType == PATH_TYPE_SQUARE || pathType == PATH_TYPE_CIRCLE)
         {
-            canvas.drawText("Inside = " + insideStartOval(), 6f, updateY[7], statsPaint);
+            canvas.drawText("Inside = " + ovalInsideTime, 6f, updateY[7], statsPaint);
             canvas.drawText("Laps = " + laps + "/" + targetLaps, 6f, updateY[6], statsPaint);
             canvas.drawText("Wall hits = " + wallHits, 6f, updateY[5], statsPaint);
             canvas.drawText("-----------------", 6f, updateY[4], statsPaint);
