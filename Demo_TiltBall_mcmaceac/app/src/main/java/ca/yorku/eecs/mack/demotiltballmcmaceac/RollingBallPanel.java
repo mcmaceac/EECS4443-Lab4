@@ -60,6 +60,7 @@ public class RollingBallPanel extends View
     boolean lapFlag;
     boolean notCheating = true;
     boolean testingStarted = false;
+    boolean firstLapStarted = false;
 
     float xBall, yBall; // top-left of the ball (for painting)
     float xBallCenter, yBallCenter; // center of the ball
@@ -350,62 +351,67 @@ public class RollingBallPanel extends View
         }
         // if ball touches wall, vibrate and increment wallHits count
         // NOTE: We also use a boolean touchFlag so we only vibrate on the first touch
-        if (ballTouchingLine() && !touchFlag) {
-            touchFlag = true; // the ball has *just* touched the line: set the touchFlag
-            vib.vibrate(20); // 20 ms vibrotactile pulse
-            ++wallHits;
+        if (firstLapStarted) {      //only record stats if the first lap has started
+            if (ballTouchingLine() && !touchFlag) {
+                touchFlag = true; // the ball has *just* touched the line: set the touchFlag
+                vib.vibrate(20); // 20 ms vibrotactile pulse
+                ++wallHits;
 
-        } else if (!ballTouchingLine() && touchFlag)
-            touchFlag = false; // the ball is no longer touching the line: clear the touchFlag
+            } else if (!ballTouchingLine() && touchFlag)
+                touchFlag = false; // the ball is no longer touching the line: clear the touchFlag
 
 
-        // check to see if the ball is inside the boundaries, and update timers appropriately
-        if (insideBoundaries()) {
-            timeInside = System.currentTimeMillis() - startTime - timeOutside;
-        } else {
-            timeOutside = System.currentTimeMillis() - startTime - timeInside;
+            // check to see if the ball is inside the boundaries, and update timers appropriately
+            if (insideBoundaries()) {
+                timeInside = System.currentTimeMillis() - startTime - timeOutside;
+            } else {
+                timeOutside = System.currentTimeMillis() - startTime - timeInside;
+            }
+            lapTime = System.currentTimeMillis() - startLapTime;
+
+            //if notCheating is already true, we know the user has crossed the halfway point already
+            notCheating = notCheating || ballCrossedHalfWayPoint();
         }
-        lapTime = System.currentTimeMillis() - startLapTime;
-
-        //if notCheating is already true, we know the user has crossed the halfway point already
-        notCheating = notCheating || ballCrossedHalfWayPoint();
-
         // increase the lap count if the ball crosses the halfway point
         // we use the lapflag to know that the user is already in the bottom half
         if (ballCrossedFinishLine() && !lapFlag) {
             //Log.i("MYDEBUG", "lapTimes size = " + lapTimes.length);
-            lapFlag = true;
-            tg.startTone(ToneGenerator.TONE_CDMA_PIP, 150);
-            lapTimes[laps] = lapTime;
-            ++laps;
-            startLapTime = System.currentTimeMillis();
+            if (firstLapStarted) {
+                lapFlag = true;
+                tg.startTone(ToneGenerator.TONE_CDMA_PIP, 150);
+                lapTimes[laps] = lapTime;
+                ++laps;
+                startLapTime = System.currentTimeMillis();
 
-            // we have reached the target laps, meaning we need to show the results screen
-            if (laps == targetLaps) {
-                //calculate the average lap time
-                double sum = 0.0;
-                for (int i = 0; i < targetLaps; i++) {
-                    sum += lapTimes[i];
+                // we have reached the target laps, meaning we need to show the results screen
+                if (laps == targetLaps) {
+                    //calculate the average lap time
+                    double sum = 0.0;
+                    for (int i = 0; i < targetLaps; i++) {
+                        sum += lapTimes[i];
+                    }
+                    sum /= targetLaps;
+                    sum /= 1000.0; //converting to seconds
+
+                    //calculate the % time inside the boundaries
+                    double percentInPathTime = (timeInside / (timeInside + timeOutside) * 100);
+
+                    Bundle b = new Bundle();
+                    b.putInt("wallHits", wallHits);
+                    b.putDouble("averageLapTime", sum);
+                    b.putDouble("percentInPathTime", percentInPathTime);
+                    b.putInt("targetLaps", targetLaps);
+
+                    Context c = getContext();
+                    Intent i = new Intent(c, Results.class);
+                    i.putExtras(b);
+                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    c.startActivity(i);
                 }
-                sum /= targetLaps;
-                sum /= 1000.0; //converting to seconds
-
-                //calculate the % time inside the boundaries
-                double percentInPathTime = (timeInside / (timeInside + timeOutside) * 100);
-
-                Bundle b = new Bundle();
-                b.putInt("wallHits", wallHits);
-                b.putDouble("averageLapTime", sum);
-                b.putDouble("percentInPathTime", percentInPathTime);
-                b.putInt("targetLaps", targetLaps);
-
-                Context c = getContext();
-                Intent i = new Intent(c, Results.class);
-                i.putExtras(b);
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                c.startActivity(i);
             }
-
+            firstLapStarted = true;
+            startTime = System.currentTimeMillis();         //the first lap and timer has started
+            startLapTime = startTime;
         } else if (yBallCenter < (height / 2) && lapFlag) {
             lapFlag = false;
         }
