@@ -141,6 +141,8 @@ public class RollingBallPanel extends View
         innerRectangle = new RectF();
         innerShadowRectangle = new RectF();
         outerShadowRectangle = new RectF();
+        outerDetectRectangle = new RectF();
+        innerDetectRectangle = new RectF();
         ballNow = new RectF();
         wallHits = 0;
         laps = 0;
@@ -211,6 +213,16 @@ public class RollingBallPanel extends View
         innerShadowRectangle.top = innerRectangle.top + ballDiameter - 2f;
         innerShadowRectangle.right = innerRectangle.right - ballDiameter + 2f;
         innerShadowRectangle.bottom = innerRectangle.bottom - ballDiameter + 2f;
+
+        outerDetectRectangle.left = outerRectangle.left + ballDiameter / 2f;
+        outerDetectRectangle.top = outerRectangle.top + ballDiameter / 2f;
+        outerDetectRectangle.right = outerRectangle.right - ballDiameter / 2f;
+        outerDetectRectangle.bottom = outerRectangle.bottom - ballDiameter / 2f;
+
+        innerDetectRectangle.left = innerRectangle.left + ballDiameter / 2f;
+        innerDetectRectangle.top = innerRectangle.top + ballDiameter / 2f;
+        innerDetectRectangle.right = innerRectangle.right - ballDiameter / 2f;
+        innerDetectRectangle.bottom = innerRectangle.bottom - ballDiameter / 2f;
 
         // initialize a few things (e.g., paint and text size) that depend on the device's pixel density
         pixelDensity = this.getResources().getDisplayMetrics().density;
@@ -292,6 +304,9 @@ public class RollingBallPanel extends View
         xBallCenter = xBall + ballDiameter / 2f;
         yBallCenter = yBall + ballDiameter / 2f;
 
+        if (ballTouchingLine() && !insideBoundaries()) {
+            touchFlag = true;                               //we only want a vibrate when the ball goes from inside to outside
+        }
         // if ball touches wall, vibrate and increment wallHits count
         // NOTE: We also use a boolean touchFlag so we only vibrate on the first touch
         if (ballTouchingLine() && !touchFlag)
@@ -516,7 +531,7 @@ public class RollingBallPanel extends View
             ballNow.right = xBall + ballDiameter;
             ballNow.bottom = yBall + ballDiameter;
 
-            if (RectF.intersects(ballNow, outerRectangle) && !RectF.intersects(ballNow, innerShadowRectangle)) {
+            if (RectF.intersects(ballNow, outerDetectRectangle) && !RectF.intersects(ballNow, innerDetectRectangle)) {
                 return true;
             }
         }
