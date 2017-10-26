@@ -49,7 +49,7 @@ public class RollingBallPanel extends View
 
     float finishLineLeftX, finishLineLeftY, finishLineRightX, finishLineRightY;
 
-    RectF innerRectangle, outerRectangle, innerShadowRectangle, outerShadowRectangle, ballNow, outerDetectRectangle, innerDetectRectangle;
+    RectF innerRectangle, outerRectangle, innerShadowRectangle, outerShadowRectangle, ballNow, outerDetectRectangle, innerDetectRectangle, startOval;
 
     float pathWidth;
     boolean touchFlag;
@@ -77,7 +77,7 @@ public class RollingBallPanel extends View
     float dBall; // the amount to move the ball (in pixels): dBall = dT * velocity
     float xCenter, yCenter; // the center of the screen
     long now, lastT;
-    Paint statsPaint, labelPaint, linePaint, fillPaint, backgroundPaint, startLinePaint;
+    Paint statsPaint, labelPaint, linePaint, fillPaint, backgroundPaint, startLinePaint, startOvalPaint;
     float[] updateY;
 
     public RollingBallPanel(Context contextArg)
@@ -106,6 +106,10 @@ public class RollingBallPanel extends View
         startLinePaint.setStyle(Paint.Style.STROKE);
         startLinePaint.setStrokeWidth(8);
         startLinePaint.setAntiAlias(true);
+
+        startOvalPaint = new Paint();
+        startOvalPaint.setColor(Color.BLUE);
+        startOvalPaint.setStyle(Paint.Style.FILL);
 
         linePaint = new Paint();
         linePaint.setColor(Color.RED);
@@ -139,6 +143,7 @@ public class RollingBallPanel extends View
         lapFlag = false;
         outerRectangle = new RectF();
         innerRectangle = new RectF();
+        startOval = new RectF();
         innerShadowRectangle = new RectF();
         outerShadowRectangle = new RectF();
         outerDetectRectangle = new RectF();
@@ -200,6 +205,13 @@ public class RollingBallPanel extends View
         innerRectangle.top = yCenter - radiusInner;
         innerRectangle.right = xCenter + radiusInner;
         innerRectangle.bottom = yCenter + radiusInner;
+
+        // start oval that appears on the top right of the screen
+        // indicating where the ball should start
+        startOval.left = width - 300f;
+        startOval.top = 50f;                //diameter = 250
+        startOval.bottom = 300f;            //centerX = width - 175 centerY = 175
+        startOval.right = width - 50f;
 
         // configure outer shadow rectangle (needed to determine wall hits)
         // NOTE: line thickness (aka stroke width) is 2
@@ -398,6 +410,9 @@ public class RollingBallPanel extends View
             canvas.drawOval(innerRectangle, linePaint);
         }
 
+        //draw the start circle
+        canvas.drawOval(startOval, startOvalPaint);
+
         //draw the start line
         finishLineLeftX = outerRectangle.left;
         finishLineLeftY = height / 2;
@@ -416,7 +431,7 @@ public class RollingBallPanel extends View
         // draw stats (pitch, roll, tilt angle, tilt magnitude)
         if (pathType == PATH_TYPE_SQUARE || pathType == PATH_TYPE_CIRCLE)
         {
-            canvas.drawText("Inside = " + insideBoundaries(), 6f, updateY[7], statsPaint);
+            canvas.drawText("Inside = " + insideStartOval(), 6f, updateY[7], statsPaint);
             canvas.drawText("Laps = " + laps + "/" + targetLaps, 6f, updateY[6], statsPaint);
             canvas.drawText("Wall hits = " + wallHits, 6f, updateY[5], statsPaint);
             canvas.drawText("-----------------", 6f, updateY[4], statsPaint);
@@ -542,6 +557,18 @@ public class RollingBallPanel extends View
             // pythagorean theorem: if < r, it is in circle. if > r, outside circle
             if (Math.abs(ballDistance) < (radiusOuter) && Math.abs(ballDistance) > (radiusInner))
                 return true;
+        }
+        return false;
+    }
+
+    public boolean insideStartOval() {
+        float startCenterX = width - 175;
+        float startCenterY = 175;
+        final float ballDistance = (float)Math.sqrt((xBallCenter - startCenterX) * (xBallCenter - startCenterX)
+                + (yBallCenter - startCenterY) * (yBallCenter - startCenterY));
+
+        if (Math.abs(ballDistance) < 125) { //if the ball distance is less than the radius of start
+            return true;
         }
         return false;
     }

@@ -67,8 +67,8 @@
       <file leaf-file-name="RollingBallPanel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/yorku/eecs/mack/demotiltballmcmaceac/RollingBallPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="530" column="49" selection-start-line="530" selection-start-column="49" selection-end-line="530" selection-end-column="49" />
+            <state relative-caret-position="413">
+              <caret line="569" column="39" selection-start-line="569" selection-start-column="39" selection-end-line="569" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -2991,8 +2991,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/yorku/eecs/mack/demotiltballmcmaceac/RollingBallPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="530" column="49" selection-start-line="530" selection-start-column="49" selection-end-line="530" selection-end-column="49" />
+        <state relative-caret-position="413">
+          <caret line="569" column="39" selection-start-line="569" selection-start-column="39" selection-end-line="569" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
