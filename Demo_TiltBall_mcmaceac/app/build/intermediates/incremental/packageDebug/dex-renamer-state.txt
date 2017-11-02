@@ -1,7 +1,7 @@
-#Mon Oct 23 16:17:21 EDT 2017
-base.0=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_3f7df8936778b3f8a59bcd844622a927a2ee1ebc
+#Thu Nov 02 11:19:04 EDT 2017
+base.0=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_9f7e3d92e327fd8ac63421e16caba5138f833a03
 renamed.1=classes2.dex
 renamed.0=classes.dex
-file.1=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_b4e97bd4aae1f11735864c3c4b6ce50db58fd2f4\\classes.dex
-base.1=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_b4e97bd4aae1f11735864c3c4b6ce50db58fd2f4
-file.0=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_3f7df8936778b3f8a59bcd844622a927a2ee1ebc\\classes.dex
+file.1=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_466e92eae4ca0f2a0681d833a4d1720953a303c5/classes.dex
+base.1=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_466e92eae4ca0f2a0681d833a4d1720953a303c5
+file.0=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_9f7e3d92e327fd8ac63421e16caba5138f833a03/classes.dex

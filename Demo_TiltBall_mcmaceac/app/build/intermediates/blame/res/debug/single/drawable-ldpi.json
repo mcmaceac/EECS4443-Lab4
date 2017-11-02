@@ -1,26 +1,10 @@
 [
     {
-        "merged": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ball.png",
-        "source": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\drawable-ldpi\\ball.png"
+        "merged": "/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/merged/debug/drawable-ldpi/ball.png",
+        "source": "/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/src/main/res/drawable-ldpi/ball.png"
     },
     {
-        "merged": "D:\\Users\\mcmaceac\\Documents\\School\\EECS4443\\lab4\\Demo_TiltBall_mcmaceac\\D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\icon.png",
-        "source": "D:\\Users\\mcmaceac\\Documents\\School\\EECS4443\\lab4\\Demo_TiltBall_mcmaceac\\D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\drawable-ldpi\\icon.png"
-    },
-    {
-        "merged": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\icon.png",
-        "source": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\drawable-ldpi\\icon.png"
-    },
-    {
-        "merged": "D:\\Users\\mcmaceac\\Documents\\School\\EECS4443\\lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ball.png",
-        "source": "D:\\Users\\mcmaceac\\Documents\\School\\EECS4443\\lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\drawable-ldpi\\ball.png"
-    },
-    {
-        "merged": "D:\\Users\\mcmaceac\\Documents\\School\\EECS4443\\lab4\\Demo_TiltBall_mcmaceac\\D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ball.png",
-        "source": "D:\\Users\\mcmaceac\\Documents\\School\\EECS4443\\lab4\\Demo_TiltBall_mcmaceac\\D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\drawable-ldpi\\ball.png"
-    },
-    {
-        "merged": "D:\\Users\\mcmaceac\\Documents\\School\\EECS4443\\lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\icon.png",
-        "source": "D:\\Users\\mcmaceac\\Documents\\School\\EECS4443\\lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\drawable-ldpi\\icon.png"
+        "merged": "/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/merged/debug/drawable-ldpi/icon.png",
+        "source": "/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/src/main/res/drawable-ldpi/icon.png"
     }
 ]

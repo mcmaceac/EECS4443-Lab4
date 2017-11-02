@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="D:\School\EECS4443\EECS4443-Lab4\Demo_TiltBall_mcmaceac\app\src\debug\jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/src/debug/jniLibs"/></dataSet></merger>

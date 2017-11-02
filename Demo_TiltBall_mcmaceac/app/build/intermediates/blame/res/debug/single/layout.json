@@ -1,42 +1,18 @@
 [
     {
-        "merged": "D:\\Users\\mcmaceac\\Documents\\School\\EECS4443\\lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\merged\\debug\\layout\\spinnerstyle.xml",
-        "source": "D:\\Users\\mcmaceac\\Documents\\School\\EECS4443\\lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\layout\\spinnerstyle.xml"
+        "merged": "/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/merged/debug/layout/setup.xml",
+        "source": "/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/src/main/res/layout/setup.xml"
     },
     {
-        "merged": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\merged\\debug\\layout\\setup.xml",
-        "source": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\layout\\setup.xml"
+        "merged": "/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/merged/debug/layout/results.xml",
+        "source": "/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/src/main/res/layout/results.xml"
     },
     {
-        "merged": "D:\\Users\\mcmaceac\\Documents\\School\\EECS4443\\lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\merged\\debug\\layout\\setup.xml",
-        "source": "D:\\Users\\mcmaceac\\Documents\\School\\EECS4443\\lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\layout\\setup.xml"
+        "merged": "/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/merged/debug/layout/main.xml",
+        "source": "/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/src/main/res/layout/main.xml"
     },
     {
-        "merged": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\merged\\debug\\layout\\spinnerstyle.xml",
-        "source": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\layout\\spinnerstyle.xml"
-    },
-    {
-        "merged": "D:\\Users\\mcmaceac\\Documents\\School\\EECS4443\\lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
-        "source": "D:\\Users\\mcmaceac\\Documents\\School\\EECS4443\\lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\layout\\main.xml"
-    },
-    {
-        "merged": "D:\\Users\\mcmaceac\\Documents\\School\\EECS4443\\lab4\\Demo_TiltBall_mcmaceac\\D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\merged\\debug\\layout\\spinnerstyle.xml",
-        "source": "D:\\Users\\mcmaceac\\Documents\\School\\EECS4443\\lab4\\Demo_TiltBall_mcmaceac\\D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\layout\\spinnerstyle.xml"
-    },
-    {
-        "merged": "D:\\Users\\mcmaceac\\Documents\\School\\EECS4443\\lab4\\Demo_TiltBall_mcmaceac\\D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\merged\\debug\\layout\\setup.xml",
-        "source": "D:\\Users\\mcmaceac\\Documents\\School\\EECS4443\\lab4\\Demo_TiltBall_mcmaceac\\D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\layout\\setup.xml"
-    },
-    {
-        "merged": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
-        "source": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\layout\\main.xml"
-    },
-    {
-        "merged": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\merged\\debug\\layout\\results.xml",
-        "source": "D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\layout\\results.xml"
-    },
-    {
-        "merged": "D:\\Users\\mcmaceac\\Documents\\School\\EECS4443\\lab4\\Demo_TiltBall_mcmaceac\\D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
-        "source": "D:\\Users\\mcmaceac\\Documents\\School\\EECS4443\\lab4\\Demo_TiltBall_mcmaceac\\D:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\src\\main\\res\\layout\\main.xml"
+        "merged": "/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/merged/debug/layout/spinnerstyle.xml",
+        "source": "/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/src/main/res/layout/spinnerstyle.xml"
     }
 ]

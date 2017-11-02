@@ -61,6 +61,7 @@ public class RollingBallPanel extends View
     boolean notCheating = true;
     boolean testingStarted = false;
     boolean firstLapStarted = false;
+    boolean timeStarted = false;
 
     float xBall, yBall; // top-left of the ball (for painting)
     float xBallCenter, yBallCenter; // center of the ball
@@ -360,6 +361,10 @@ public class RollingBallPanel extends View
             } else if (!ballTouchingLine() && touchFlag)
                 touchFlag = false; // the ball is no longer touching the line: clear the touchFlag
 
+            if (!timeStarted) {
+                timeStarted = true;
+                startTime = System.currentTimeMillis();         //the first lap and timer has started
+            }
 
             // check to see if the ball is inside the boundaries, and update timers appropriately
             if (insideBoundaries()) {
@@ -377,6 +382,7 @@ public class RollingBallPanel extends View
         if (ballCrossedFinishLine() && !lapFlag) {
             //Log.i("MYDEBUG", "lapTimes size = " + lapTimes.length);
             if (firstLapStarted) {
+
                 lapFlag = true;
                 tg.startTone(ToneGenerator.TONE_CDMA_PIP, 150);
                 lapTimes[laps] = lapTime;
@@ -394,6 +400,7 @@ public class RollingBallPanel extends View
                     sum /= 1000.0; //converting to seconds
 
                     //calculate the % time inside the boundaries
+
                     double percentInPathTime = (timeInside / (timeInside + timeOutside) * 100);
 
                     Bundle b = new Bundle();
@@ -410,8 +417,7 @@ public class RollingBallPanel extends View
                 }
             }
             firstLapStarted = true;
-            startTime = System.currentTimeMillis();         //the first lap and timer has started
-            startLapTime = startTime;
+            startLapTime = System.currentTimeMillis();
         } else if (yBallCenter < (height / 2) && lapFlag) {
             lapFlag = false;
         }
@@ -461,7 +467,7 @@ public class RollingBallPanel extends View
         // draw stats (pitch, roll, tilt angle, tilt magnitude)
         if (pathType == PATH_TYPE_SQUARE || pathType == PATH_TYPE_CIRCLE)
         {
-            canvas.drawText("Inside = " + ovalInsideTime, 6f, updateY[7], statsPaint);
+            canvas.drawText("Lap time = " + lapTime, 6f, updateY[7], statsPaint);
             canvas.drawText("Laps = " + laps + "/" + targetLaps, 6f, updateY[6], statsPaint);
             canvas.drawText("Wall hits = " + wallHits, 6f, updateY[5], statsPaint);
             canvas.drawText("-----------------", 6f, updateY[4], statsPaint);
@@ -540,9 +546,9 @@ public class RollingBallPanel extends View
         ballNow.bottom = yBall + ballDiameter;
 
         if (yBallCenter > (height / 2)) {
-            Log.i("MYDEBUG", "yBallCenter > (height / 2)");
-            Log.i("MYDEBUG", "ballNow.intersects: " + ballNow.intersects(finishLineLeftX, finishLineLeftY, finishLineRightX, finishLineRightY));
-            Log.i("MYDEBUG", "finishLineLeftX: " + finishLineLeftX + " mid: " + finishLineLeftY + " finishLineRightX: " + finishLineRightX);
+            //Log.i("MYDEBUG", "yBallCenter > (height / 2)");
+            //Log.i("MYDEBUG", "ballNow.intersects: " + ballNow.intersects(finishLineLeftX, finishLineLeftY, finishLineRightX, finishLineRightY));
+            //Log.i("MYDEBUG", "finishLineLeftX: " + finishLineLeftX + " mid: " + finishLineLeftY + " finishLineRightX: " + finishLineRightX);
             //check to see if the ball is between the line boundaries and if the user has at least
             //crossed the half way point
             if (notCheating && ballNow.intersects(finishLineLeftX, finishLineLeftY, finishLineRightX, finishLineRightY)) {

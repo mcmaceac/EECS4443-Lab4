@@ -1,27 +1,27 @@
 #Internal package file, do not edit.
-#Mon Oct 23 16:17:19 EDT 2017
-2.base=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_
-5.file=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\results.xml
+#Thu Nov 02 11:18:59 EDT 2017
+2.base=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/resources-debug.ap_
+5.file=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/resources-debug.ap_/res/layout/spinnerstyle.xml
 5.set=ANDROID_RESOURCE
-3.base=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_
-6.file=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\spinnerstyle.xml
+3.base=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/resources-debug.ap_
+6.file=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/resources-debug.ap_/resources.arsc
 2.set=ANDROID_RESOURCE
-4.base=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_
-7.file=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\ball.png
+4.base=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/resources-debug.ap_
+7.file=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/resources-debug.ap_/AndroidManifest.xml
 7.set=ANDROID_RESOURCE
 count=8
-0.file=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
-5.base=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_
+0.file=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/icon.png
+5.base=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/resources-debug.ap_
 4.set=ANDROID_RESOURCE
-6.base=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_
-1.file=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\icon.png
+6.base=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/resources-debug.ap_
+1.file=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/resources-debug.ap_/res/layout/setup.xml
 1.set=ANDROID_RESOURCE
-7.base=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_
-2.file=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\setup.xml
+7.base=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/resources-debug.ap_
+2.file=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/resources-debug.ap_/res/layout/main.xml
 6.set=ANDROID_RESOURCE
-0.base=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_
-3.file=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\main.xml
+0.base=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/resources-debug.ap_
+3.file=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/ball.png
 3.set=ANDROID_RESOURCE
-1.base=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_
-4.file=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\res\\resources-debug.ap_\\AndroidManifest.xml
+1.base=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/resources-debug.ap_
+4.file=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/resources-debug.ap_/res/layout/results.xml
 0.set=ANDROID_RESOURCE

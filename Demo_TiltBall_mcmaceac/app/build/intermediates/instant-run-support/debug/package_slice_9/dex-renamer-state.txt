@@ -1,4 +1,4 @@
-#Thu Oct 26 12:42:32 EDT 2017
-base.0=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_9
+#Thu Nov 02 11:19:04 EDT 2017
+base.0=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9
 renamed.0=classes.dex
-file.0=D\:\\School\\EECS4443\\EECS4443-Lab4\\Demo_TiltBall_mcmaceac\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_9\\classes.dex
+file.0=/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex
