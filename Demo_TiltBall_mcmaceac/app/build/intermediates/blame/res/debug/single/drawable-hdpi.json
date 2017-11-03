@@ -1,5 +1,13 @@
 [
     {
+        "merged": "/Users/mcmaceac/Documents/School/EECS4443/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/merged/debug/drawable-hdpi/icon.png",
+        "source": "/Users/mcmaceac/Documents/School/EECS4443/lab4/Demo_TiltBall_mcmaceac/app/src/main/res/drawable-hdpi/icon.png"
+    },
+    {
+        "merged": "/Users/mcmaceac/Documents/School/EECS4443/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/merged/debug/drawable-hdpi/ball.png",
+        "source": "/Users/mcmaceac/Documents/School/EECS4443/lab4/Demo_TiltBall_mcmaceac/app/src/main/res/drawable-hdpi/ball.png"
+    },
+    {
         "merged": "/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/res/merged/debug/drawable-hdpi/icon.png",
         "source": "/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/src/main/res/drawable-hdpi/icon.png"
     },

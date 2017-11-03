@@ -1,5 +1,219 @@
 [
     {
+        "outputFile": "/Users/mcmaceac/Documents/School/EECS4443/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 50,
+                    "endOffset": 101
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab4/Demo_TiltBall_mcmaceac/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 56,
+                        "endColumn": 50,
+                        "endOffset": 102
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 106,
+                    "endColumn": 43,
+                    "endOffset": 145
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab4/Demo_TiltBall_mcmaceac/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 488,
+                        "endColumn": 43,
+                        "endOffset": 527
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 150,
+                    "endColumn": 45,
+                    "endOffset": 191
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab4/Demo_TiltBall_mcmaceac/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 532,
+                        "endColumn": 45,
+                        "endOffset": 573
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 196,
+                    "endColumn": 46,
+                    "endOffset": 238
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab4/Demo_TiltBall_mcmaceac/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 578,
+                        "endColumn": 46,
+                        "endOffset": 620
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 243,
+                    "endColumn": 51,
+                    "endOffset": 290
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab4/Demo_TiltBall_mcmaceac/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 247,
+                        "endColumn": 51,
+                        "endOffset": 294
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 295,
+                    "endColumn": 64,
+                    "endOffset": 355
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab4/Demo_TiltBall_mcmaceac/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 423,
+                        "endColumn": 64,
+                        "endOffset": 483
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 360,
+                    "endColumn": 73,
+                    "endOffset": 429
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab4/Demo_TiltBall_mcmaceac/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 173,
+                        "endColumn": 73,
+                        "endOffset": 242
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 434,
+                    "endColumn": 60,
+                    "endOffset": 490
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab4/Demo_TiltBall_mcmaceac/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 362,
+                        "endColumn": 60,
+                        "endOffset": 418
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 495,
+                    "endColumn": 62,
+                    "endOffset": 553
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab4/Demo_TiltBall_mcmaceac/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 299,
+                        "endColumn": 62,
+                        "endOffset": 357
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 558,
+                    "endColumn": 52,
+                    "endOffset": 606
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab4/Demo_TiltBall_mcmaceac/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 625,
+                        "endColumn": 52,
+                        "endOffset": 673
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 611,
+                    "endColumn": 65,
+                    "endOffset": 672
+                },
+                "from": {
+                    "file": "/Users/mcmaceac/Documents/School/EECS4443/lab4/Demo_TiltBall_mcmaceac/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 107,
+                        "endColumn": 65,
+                        "endOffset": 168
+                    }
+                }
+            }
+        ]
+    },
+    {
         "outputFile": "/eecs/home/mcmaceac/4443/Labs/lab4/Demo_TiltBall_mcmaceac/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
         "map": [
             {
